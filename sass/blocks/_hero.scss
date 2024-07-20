@@ -1,0 +1,84 @@
+.main{
+    width: 100%;
+}
+.hero{
+    width: 100%;
+    min-height: 807px;
+    background: url(../images/hero-bg.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    @include df();
+    &__left,&__right {
+        width: 50%;
+        height: 100%;
+        @include dfc();
+        gap: 50px;
+    }
+    &__bg{
+        background: var(--bg-primary);
+    }
+    &__title{
+        width: 80%;
+        height: 275px;
+        font-size: 64px;
+        font-weight: 700;
+        line-height: 80px;
+        color: var(--text);
+    }
+    &__text{
+        width: 456px;
+        height: 83px;
+        font-size: 16px;
+        line-height: 20px;
+        font-weight: 500;
+        color: var(--bgn-nav-items);
+    }
+    &__form{
+        padding: 10px;
+        width: 443px;
+        height: 60px;
+        @include df();
+        background: var(--text);
+        border-radius: 15px;
+    }
+    &__search{
+        width: 21px;
+        height: 21px;
+        color: var(--bgn-nav-items);
+    }
+    &__inp{
+        width: 415px;
+        height: 45px;
+        padding: 3px 5px;
+        border: none;
+    }
+    &__inp::placeholder{
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 20px;
+        color: var(--placeholder);
+    }
+    &__btn{
+        background-color: var(--button-color);
+        border-radius: 8px;
+        padding: 10px 30px;
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 22px;
+        color: var(--text);
+        transition: .5s;
+    }
+    &__btn:hover{
+        cursor: pointer;
+        opacity: .7;
+    }
+    &__btn:active{
+        transform: scale(.9);
+    }
+    .hero__img{
+        width: 461px;
+        height: 563px;
+    }
+}
+

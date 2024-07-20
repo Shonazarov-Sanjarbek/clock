@@ -1,0 +1,76 @@
+
+.subscribe{
+    margin-top: 135px;
+    width: 100%;
+    height: 377px;
+    @include df();
+    gap: 5px;
+    background: var(--card-f6);
+    border-radius: 22px;
+    margin-bottom: 91px;
+    &__desc{
+        width: 50%;
+        @include dfc(start ,center);
+        gap: 12px;
+    }
+    &__title{
+        width: 100%;
+        height: 40px;
+        @include df(start, center);
+        font-size: 36px;
+        font-weight: 700;
+        line-height: 43px;
+    }
+    &__text{
+        width: 100%;
+        height: 30px;
+        @include df(start, center);
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 19px;
+    }
+    &__form{
+        width: 443px;
+        height: 60px;
+        @include df(start, center);
+        background: var(--text);
+        border-radius: 22px;
+        padding: 5px 10px;
+    }
+    &__inp{
+        height: 45px;
+        padding: 5px 10px;
+        flex: 1;
+    }
+    &__inp::placeholder{
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 20px;
+    }
+    &__btn{
+        width: 131px;
+        height: 45px;
+        padding: 5px 10px;
+        background: var(--button-color);
+        border-radius: 12px;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 20px;
+        color: var(--text);
+        transition: .5s;
+    }
+    &__btn:hover{
+        cursor: pointer;
+        opacity: .7;
+    }
+    &__btn:active{
+        transform: scale(.9);
+    }
+}
+
+
+
+
+
+
+

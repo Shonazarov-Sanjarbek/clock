@@ -1,0 +1,101 @@
+.about{
+    width: 100%;
+    min-height: 696px;
+    @include df();
+    &__block{
+        width: 100%;
+        height: 426px;
+        @include dfc(center, start);
+        gap: 45px;
+    }
+    &__subtitle{
+        width: 100%;
+        height: auto;
+        @include dfc();
+        text-align: center;
+        gap: 5px;
+    }
+    &__title{
+        width: 100%;
+        height: 24px;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 19px;
+        color: var(--button-color);
+    }
+    &__desc{
+        width: 100%;
+        height: 43px;
+        font-size: 36px;
+        line-height: 43px;
+        font-weight: 700;
+    }
+    &__wrapper{
+        width: 100%;
+        height: auto;
+        @include df(start, start);
+        gap: 47px;
+    }
+    &__card{
+        width: 50%;
+        height: 239px;
+        background: var(--card-f6);
+        border-radius: 22px;
+        @include df(start, start);
+        gap: 27px;
+    }
+    &__card__img{
+        width: 40%;
+        height: 100%;
+        @include df();
+    
+    }
+    &__card__title{
+        width: 60%;
+        height: 100%;
+        @include dfc(start, center);
+        gap: 10px;
+    }
+    &__card__title__text{
+        width: 100%;
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 29px;
+    }
+    &__card__desc__text{
+        width: 255px;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 19px;
+    }
+    &__star{
+        width: 100%;
+        height: 28px;
+        @include df(start, center);
+        gap: 5px;
+    }
+    &__circle{
+        width: 100%;
+        @include df(center, start);
+        gap: 11px;
+    }
+    &__circle__block{
+        width: 18px;
+        height: 18px;
+        border-radius: 50%;
+        background: var(--circle-d9);
+    }
+    &__circle__block:last-child{
+        background: var(--button-color);
+    }
+}
+
+
+
+
+
+
+
+
+
+
