@@ -2,19 +2,45 @@ const API__PRODUCTS = "https://dummyjson.com"
 
 const wrapper = document.querySelector(".prodacts__wrapper")
 const skeleton = document.querySelector(".skeleton__wrapper")
+const viewMoreBtn = document.querySelector(".prodacts__btn")
+console.log(viewMoreBtn);
 // console.log(wrapper);
 // console.log(API__PRODUCTS);
 
-async function fetchData(api) {
+let perPageCount = 6
+let offset = 1
+let categoryValue = ""
+
+async function fetchData(api, limit, category) {
     try {
-        await fetch(`${api}/products`)
-        .then(res => res.json()).then(data => console.log(data))
+        skeleton.style.display = "flex"
+        await fetch(`${api}/products${category}?limit=${limit}`)
+        .then(res => res.json()).then(data => createCard(data))
+        .finally(skeleton.style.display = "none")
     } catch (error) {
         console.log("error");
     }
 }
 
-fetchData(API__PRODUCTS)
+fetchData(API__PRODUCTS, perPageCount, "")
+
+function createCard(data) {
+    while (wrapper.firstChild) {
+        wrapper.firstChild.remove(  )
+    }
+    data.products.forEach(prodact => {
+        console.log(data);
+        console.log(prodact);
+        let card = document.createElement("div")
+        card.classList.add("prodacts__card")
+        console.log(card);
+        card.innerHTML = `
+        <img src="${prodact.thumbnail}" alt="">
+
+        `
+        wrapper.appendChild(card)
+    });
+}
 
 for (let i = 0;i < 12;i++) {
     const wrapper = document.createElement("div");
@@ -29,5 +55,9 @@ for (let i = 0;i < 12;i++) {
                         </div>
                       </div>`;
     skeleton.appendChild(wrapper);
-    // console.log("sdsd")
 }
+viewMoreBtn.addEventListener("click", ()=> {
+    offset++
+    fetchData(API__PRODUCTS, perPageCount * offset, categoryValue)
+}
+)

@@ -24,20 +24,14 @@
         height: auto;
         @include df(center, center);
         flex-wrap: wrap;
-        gap: 49px;
-        border: 1px solid red;
+        gap: 50px;
     }
     &__card{
-        width: 335px;
-        height: auto;
+        width: calc(33.33% - 33.33px);
         @include dfc(center, start);
         transition: .5s;
-        overflow: hidden;
+        // overflow: hidden;
         gap: 8px;
-    }
-    &__card:hover{
-        width: 100%;
-        cursor: pointer;
     }
     &__block__btn{
         width: 100%;
